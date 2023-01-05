@@ -1,0 +1,4 @@
+Date: 3 jan 2023
+
+Given an email id-or-Phone number and Password, we will simply insert the 
+data into our database. (done)
