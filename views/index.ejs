@@ -12,17 +12,18 @@
     
    
     <div id = "login_form" >
-    <form method = "post" action = "/login">
+    <form method="post" action='/login' >
       <input type="text" name = "email_or_phone"  placeholder="Email or phone">
-      <div id = "displayPhoneEmailError">test <%=item1%></div>
+      <div id = "phoneEmailError" ><%=displayPhoneEmailError%></div>
 
   
-      <input type="text" name = "password"  placeholder="Password">
-        <div id = "displayPasswordError"></div>
+      <input type="password" name = "password"  placeholder="Password">
+        <div><%=displayPasswordError%></div>
         <br>
         
-        <br>
+        <a href = "/find">
       <input type="submit" value="log in">
+      </a>
       </form>
       <br>
       <br>
