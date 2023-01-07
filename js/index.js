@@ -1,7 +1,25 @@
+
 const express = require('express');
 const app = express();
 const port = 8080;
 const path = require('path');
+
+app.set('views', path.resolve('../views'));
+app.set('view engine', 'ejs');
+
+
+
+app.get('/index', (req, res) => {
+    
+  fields.displayPasswordError = "";
+  fields.displayPhoneEmailError = "";
+  res.render(path.join(dir_,'index.ejs'),fields);
+  
+
+
+})
+
+
 
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       
@@ -16,19 +34,18 @@ const router = express.Router()
 
 router.use(bodyParser.json());
 
+var fields = {displayPasswordError:"",
+displayPhoneEmailError:"",
+url:"",
+}
+var dir_ = path.resolve('../views');
 
 
-app.get('/index', (req, res) => {
-    
-    var dir_ = path.resolve('../html');
-    res.sendFile(path.join(dir_, '/index.html'));
 
-
-})
 app.get('/registration',(req,res)=> {
 
-    var dir_ = path.resolve('../html');
-    res.sendFile(path.join(dir_, '/registration.html'));
+    
+    res.render(path.join(dir_,'registration.ejs'),fields);
 
 
 })
@@ -58,38 +75,79 @@ mongoose.connect(con_str,function(error){
 
 
 var UserSchema = new mongoose.Schema({
-  email_or_phone: String,
+  email: String,
+  phone: String,
   password:String
 }, { collection: 'all_users' });
 
 const User = mongoose.model('User', UserSchema);
 
 
-
+var dict_to_enter_in_record = {phone:"",email:"",password:""}
 
 app.post('/login',(req,res)=>{
 
-  req_dict = JSON.parse(JSON.stringify(req.body));
-  var t_user = new User(req_dict);
-  t_user.save(t_user,function(err,result){
+  
+  
+
+  entered_dict = JSON.parse(JSON.stringify(req.body));
+  dict_to_enter_in_record.password = entered_dict.password;
+  var entry = entered_dict.email_or_phone;
+  const regex_email = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const regex_mobile = /^[0]?[789]\d{9}$/;
+  
+  if(regex_mobile.test(entry)){
+    //its a valid mobile number
+      dict_to_enter_in_record.phone = entry;
+      var t_user = new User(dict_to_enter_in_record);
+      t_user.save(t_user,function(err,result){
+        if(err){
+          res.send(err);
+        }
+        else{
+          console.log("record added in db sucessfully...");
+        }
+    })
+    res.send("You entered a valid mobile number..");
+    clean(dict_to_enter_in_record);
+  }
+  
+  else if(regex_email.test(entry)){
+    //its a valid email adress
+    
+    dict_to_enter_in_record.email = entry;
+    var t_user = new User(dict_to_enter_in_record);
+    t_user.save(t_user,function(err,result){
       if(err){
         res.send(err);
       }
-      else{
-        res.send("Record Inserted Sucessfully in the Database!");
-        
-      }
-  })
+    })
+    res.send('you entered a vaild email address');
+    clean(dict_to_enter_in_record);
+  }
+  else{
+    fields.displayPhoneEmailError = "Invalid email or phone!";
+    res.render(path.join(dir_,'index.ejs'),fields);
+    fields.displayPhoneEmailError = "";
+
+  }
+  
+  
   
   
   
 })
 
+function clean(d){
 
+    d.email = "";
+    d.phone = "";
+    d.password =  "";
+}
 
 
 app.listen(port, function () {
-    console.log("Server is running on localhost8080");
+    console.log("Server is running on localhost:8080");
 });
 
 
