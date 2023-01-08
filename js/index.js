@@ -6,6 +6,34 @@ const path = require('path');
 
 app.set('views', path.resolve('../views'));
 app.set('view engine', 'ejs');
+var dir_ = path.resolve('../views');
+fs = require('fs');
+
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const ejs = require('ejs');
+var fields = {displayPasswordError:"",
+displayPhoneEmailError:"",
+url:"",
+var1:"",
+}
+
+//dynamic insertion (working fine tested)
+
+
+
+var file = fs.readFileSync(dir_ + '/index.ejs', 'ascii');
+var rendered_html_string = ejs.render(file,fields);
+//converting the string to dom element
+var document = new JSDOM(rendered_html_string);
+
+el = new JSDOM('<button>hi</button>').window.document.body;
+
+//inserting the element (type = html node)
+document.window.document.getElementById("test_button").appendChild(el);
+
+
+// finally sending the serialized version as response res.send(document.serialize())
 
 
 
@@ -13,7 +41,10 @@ app.get('/index', (req, res) => {
     
   fields.displayPasswordError = "";
   fields.displayPhoneEmailError = "";
-  res.render(path.join(dir_,'index.ejs'),fields);
+  fields.var1 = "<button>hello</button>";
+  
+
+  res.send(document.serialize());
   
 
 
@@ -34,11 +65,8 @@ const router = express.Router()
 
 router.use(bodyParser.json());
 
-var fields = {displayPasswordError:"",
-displayPhoneEmailError:"",
-url:"",
-}
-var dir_ = path.resolve('../views');
+
+
 
 
 
