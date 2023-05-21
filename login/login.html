@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" type="text/css" href="login.css" />
+
+</head>
+<body class = "body">
+  <div id = "top_strip" class = "strip">
+  </div>
+  <div id = "middle_strip" class = "strip">
+
+   
+
+    <img id="acc_settings" src="settings_icon.png" onclick="">
+
+
+
+    <div>
+      <div id = "balance_text" >
+        Balance = <span id = "rupee">&#8377;</span><div id = "balance"></div> 
+      </div>
+      
+      
+    </div>
+  </div>
+  <div id = "bottom_strip" class = "strip">
+      <div id = "website-name">
+          YOrPOker
+      </div>
+  </div>
+  
+  </div>
+  <div id = "strip_1">
+    <div id="game_type_text">
+        Select game type
+    </div>
+    <button type="button" class = "games" id = "game1_button" onclick="insertUserInWaitingList('game1');setWaiting();">Min 5<span >&#8377;</span>,Max 100<span >&#8377;</span></button>
+
+
+
+    <button type="button" class = "games" id = "game2_button" onclick="insertUserInWaitingList('game2');setWaiting();">Min 10<span >&#8377;</span>,Max 1000<span >&#8377;</span></button>
+
+
+
+
+    <button type="button" class = "games" id = "game3_button" onclick="insertUserInWaitingList('game3');setWaiting();">Min 100<span >&#8377;</span>,Max 10000<span >&#8377;</span></button>
+  </div>
+  
+    <div id = "error-msg-form">
+          <div class = "header-form">
+              <a href="#" class="close" onclick="closeBox('error-msg-form');removeUserfromWL();removeWaiting();">&times;</a>
+          </div>
+
+          <div class = "error" id = "error-msg">
+          </div>
+
+      </div>
+
+    <div id  = "gamearea">
+      <button class="quit_game" id = "close_game" type="button" onclick="openBox('binary_box');">QUIT GAME</button>
+      
+
+          <div id = "player_1" class="player_icon">
+              <div class = "speech_bubble">
+                  <div class="bubble_rectangle">
+                      <div id = "bt_1" class = "bubble_text">
+                          Hello1!
+                      </div>
+                  </div>
+                  <div class="bubble_triangle">
+                    
+                  </div>
+              </div>
+              <div class="player_head" id = "ph_1">
+              </div>
+              <div class="player_body" id = "pb_1">
+              </div>
+              <div id = "p1_name" class = "p_name">
+                  Player 1
+              </div>
+          </div>
+
+          <div id = "player_2" class="player_icon">
+              <div class = "speech_bubble">
+                  <div class="bubble_rectangle">
+                      <div id = "bt_2" class = "bubble_text">
+                          Hello2!
+                      </div>
+                  </div>
+                  <div class="bubble_triangle">
+                    
+                  </div>
+              </div>
+              <div class="player_head" id = "ph_2">
+              </div>
+              <div class="player_body" id = "pb_2">
+              </div>
+              <div id = "p2_name" class = "p_name">
+                  Player 2
+              </div>
+          </div>
+
+
+
+          <div id = "player_3" class="player_icon">
+              <div class = "speech_bubble" >
+                  <div class="bubble_rectangle">
+                      <div id = "bt_3" class = "bubble_text">
+                          Hello3!
+                      </div>
+                  </div>
+                  <div class="bubble_triangle">
+                    
+                  </div>
+              </div>
+              <div class="player_head" id = "ph_3">
+              </div>
+              <div class="player_body" id = "pb_3">
+              </div>
+              <div id = "p3_name" class = "p_name">
+                  Player 3
+              </div>
+          </div>
+
+
+          <div id = "player_4" class="player_icon">
+              <div class = "speech_bubble" >
+                  <div class="bubble_rectangle">
+                      <div id = "bt_4" class = "bubble_text">
+                          Hello4!
+                      </div>
+                  </div>
+                  <div class="bubble_triangle">
+                    
+                  </div>
+              </div>
+              <div class="player_head" id = "ph_4">
+              </div>
+              <div class="player_body" id = "pb_4">
+              </div>
+              <div id = "p1_name" class = "p_name">
+                  Player 4
+              </div>
+          </div>
+
+          <div id = "player_5" class="player_icon">
+              <div class = "speech_bubble" >
+                  <div class="bubble_rectangle">
+                      <div id = "bt_5" class = "bubble_text">
+                          Hello5!
+                      </div>
+                  </div>
+                  <div class="bubble_triangle">
+                    
+                  </div>
+              </div>
+              <div class="player_head" id = "ph_5">
+              </div>
+              <div class="player_body" id = "pb_5">
+              </div>
+              <div id = "p5_name" class = "p_name">
+                  Player 5
+              </div>
+          </div>
+
+        <div id = "game_buttons">
+          <button type="button" id = "check_btn" >Check</button>
+          <button type="button" id = "call_btn" >Call</button>
+          <button type="button" id = "raise_btn" >Raise</button>
+          <button type="button" id = "fold_btn" >Fold</button>
+        </div>
+
+
+    </div>
+
+    <div id = "binary_box">
+
+      <div class = "header-form_1">
+              
+      </div>
+
+      <div id = "bb_msg">
+        You will loose all bet money for the current game. Do you want to Quit?
+      </div>
+      <br>
+      <br>
+      <button type="button" id = "yes_button" onclick="quitGame()">Yes</button>
+      <button type="button" id = "no_button" onclick="closeBox('binary_box');">No</button>
+    </div>
+  
+
+  
+  
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,340 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width:100vw;
+  height: 100vh;
+  overflow: auto;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+
+
+
+@media screen and (min-width: 1001px) and (max-width: 3000px) {
+
+#acc_settings{
+  height: 3vw;
+  width: 3vw;
+  float: right;
+  cursor: pointer;
+}
+
+
+
+
+.strip{
+  height: 4vw;
+  width:100vw;
+}
+#middle_strip{
+  background: black;
+
+}
+#top_strip{
+  background:white;
+  display: block;
+}
+#bottom_strip{
+  background: linear-gradient(to right, green,chartreuse);
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  text-align: right;
+  font-size: 38px;
+}
+
+
+#balance{
+  float:right;
+  width: fit-content;
+}
+#balance_text{
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  width:fit-content;
+}
+#rupee{
+  float: right;
+}
+#strip_1{
+  height: 75px;
+  display: block;
+
+}
+
+/*done till now*/
+
+
+#game_type_text{
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  font-size: 16px;
+  float: left;
+  margin-right: 40px;
+  margin-top: 35px;
+}
+
+.games {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  float:left;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.games:hover,
+.games:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.games:active {
+  background: var(--color);
+  color: #fff;
+}
+
+#error-msg-form{
+  display: block;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  width:300px;
+  height:200px;
+  margin-left: -150px;
+  margin-top: -100px;
+  border: 2px solid black;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  z-index: 3;
+  background: linear-gradient(to right, grey, white);
+
+}
+
+.header-form{
+  height: 34px;
+  background: linear-gradient(to right, lightblue, grey);
+}
+.close {
+  position: absolute; 
+  top: 0px; 
+  right: 0px; 
+  width: 20px;
+  font-size: 28px; 
+  padding-left: 7px;
+  color: #000;
+  text-decoration: none; 
+  background: linear-gradient(to right, firebrick, red);
+  opacity: 0.8;
+
+}
+.close:hover{
+  font-size:28px;
+  top:0px;
+  background: red;
+  right:0px;
+  width: 20px;
+
+}
+.error{
+  text-align: center;
+  margin-top: 20px;
+  color:red;
+  font-weight: bold;
+}
+
+#gamearea{
+  height: 500px;
+  background-color: green;
+  display: block;
+
+}
+
+.quit_game{
+  float: right;
+  background:linear-gradient(to right,#CC0000,#FF0800);
+  color:white;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  font-weight: 600;
+  border:none;
+  height: 40px;
+  width:100px;
+  cursor: pointer;
+  
+}
+
+.quit_game:hover{
+  background:linear-gradient(to left,#CC0000,#FF0800);
+
+}
+
+
+#binary_box{
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:250px;
+    height:150px;
+    margin-left: -125px;
+    margin-top: -75px;
+    border: 2px solid black;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    z-index: 3;
+    background: linear-gradient(to right, grey, white);
+
+}
+
+
+
+
+/*done till now*/
+
+#player_1 {
+  top:80%;
+  left: 42%;
+  position: relative;
+}
+#player_2 {
+  top:60%;
+  left: 10%;
+  position: relative;
+}
+#player_3 {
+  
+  top:15%;
+  left: 10%;
+  position: relative;
+}
+#player_4 {
+  top:15%;
+  left: 25%;
+  position: relative;
+}
+#player_5 {
+  top:60%;
+  left: 20%;
+  position: relative;
+  transform: scale(1.1);
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+}
+
+
+.player_button {
+
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 10em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.0rem;
+  font-weight: 700;
+  letter-spacing: -.1px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  pointer-events: none;
+  transition: all .15s;
+  width: 100px;
+}
+
+
+/*done till now*/
+
+.bubble_triangle {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 0px ; /* change color as needed */
+  border-top:30px solid fuchsia;
+}
+.bubble_rectangle {
+  height: 50px;
+  width: 170px;
+  background-color:fuchsia;
+  border-radius: 10px 10px 10px 0px;
+}
+.bubble_text {
+  color:white;
+  font-weight: 700;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  height: 50px;
+  width: 170px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+#speech_bubble_1{
+  top:60%;
+  left: 50%;
+  position: relative;
+}
+#speech_bubble_2{
+  top:23%;
+  left: 29%;
+  position: relative;
+}
+#speech_bubble_3{
+  top:38%;
+  left: 39%;
+  position: relative;
+}
+#speech_bubble_4{
+  top:55%;
+  left: 60%;
+  position: relative;
+}
+#speech_bubble_5{
+  top:25%;
+  left: 70%;
+  position: relative;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

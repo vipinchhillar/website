@@ -1,0 +1,26 @@
+testing and polishing----
+
+
+button testing(along with DB testing):
+
+
+
+
+window resize testing:
+
+
+
+Polishing issues:
+
+
+
+Clearing all console.logs()
+live log collection of users who login for growth reason.
+
+
+security checking.
+
+
+Live online testing
+
+

@@ -1,0 +1,649 @@
+
+/*large------------------------------*/
+
+@media screen and (min-width: 1001px) and (max-width: 3000px) {
+
+  #acc_settings{
+    height: 3vw;
+    width: 3vw;
+    float: right;
+    cursor: pointer;
+    margin-right: 2vw;
+  }
+  .strip{
+    height: 4vw;
+    width:100vw;
+  }
+  #middle_strip{
+    background: white;
+
+  }
+  #top_strip{
+    background:white;
+  }
+  #bottom_strip{
+    background: linear-gradient(to right, green,chartreuse);
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    text-align: right;
+    font-size: 3.8vw;
+  }
+  #website-name{
+    margin-right: 2vw;
+  }
+  #balance_text{
+    margin-left: 2vw;
+  }
+  #balance{
+    float:right;
+    width: fit-content;
+  }
+  #balance_text{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    width:fit-content;
+  }
+  #rupee{
+    float: right;
+  }
+  #strip_1{
+    height: 7.5vw;
+    width:100vw;
+    background-color: white;
+    display: block;
+
+  }
+  #game_type_text{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 1.6vw;
+    float: left;
+    margin-left: 2vw;
+    margin-right: 4vw;
+    margin-top: 3.5vw;
+  }
+  .games {
+    --b: 0.3vw;   /* border thickness */
+    --s: .8vw; /* size of the corner */
+    --color: #373B44;
+    float:left;
+    padding: calc(1vw + var(--s)) calc(1vw + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .9vw;
+    font-size: 1.6vw;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 3vw;
+    margin-top: 2vw;
+  }
+
+  .games:hover,
+  .games:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05vw;
+  }
+
+  .games:active {
+    background: var(--color);
+    color: #fff;
+  }
+  #error-msg-form{
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30vw;
+    height:20vw;
+    margin-left: -15vw;
+    margin-top: -10vw;
+    border: 0.2vw solid black;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    z-index: 3;
+    background: linear-gradient(to right, lightblue, white);
+
+  }
+    .header-form{
+        height: 3.4vw;
+        background: linear-gradient(to left,lightblue, lightgrey,white);
+    }
+    .close {
+        position: absolute; 
+        top: 0vw; 
+        right: 0vw; 
+        width: 5vw;
+        font-size: 2.8vw; 
+        text-align: center;
+        color: red;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        text-decoration: none; 
+        background:linear-gradient(to right,white,lightblue);
+
+    }
+    #gamearea{
+        height: 50vw;
+        background-color: green;
+        width:100vw;
+
+    }
+    .quit_game{
+        float: right;
+        background:linear-gradient(to right,#CC0000,#FF0800);
+        color:white;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        font-weight: 600;
+        border:none;
+        height: 4vw;
+        width:10vw;
+        margin-right: 2vw;
+        cursor: pointer;
+        
+    }
+    #binary_box{
+        display: none;
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        width:40vw;
+        height:30vw;
+        margin-left: -20vw;
+        margin-top: -15vw;
+        font-size: 2vw;
+        border: .15vw solid black;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        z-index: 3;
+        background: linear-gradient(to right, lightblue, white);
+
+    }
+    .header-form_1{
+        height: 3.4vw;
+        background: linear-gradient(to left,#CC0000,#FF0800);
+    }
+    #bb_msg{
+        margin-top: 4vw;
+        margin-left: 2vw;
+    }
+    #yes_button{
+      border: 0.2vw solid #FF0800;
+      color: white;
+      font-weight: 750;
+      border-radius: 2vw;
+      margin-left: 12vw;
+      height: 3.5vw;
+      width: 10vw;
+      margin-left: 7vw;
+      margin-top: 2vw; 
+      font-size: 1.2vw;
+      font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+      cursor: pointer;
+      float: left;
+      background:linear-gradient(to left,#CC0000,#FF0800);
+    }
+    #no_button{
+      border: 0.2vw solid blue;
+      color: blue;
+      font-weight: 750;
+      border-radius: 2vw;
+      margin-left: 4vw;
+      height: 3.5vw;
+      float: left;
+      width: 10vw;
+      margin-top: 2vw; 
+      font-size: 1.2vw;
+      font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+      cursor: pointer;
+      background:white;
+    }
+
+
+
+
+.player_icon{
+  height: 17vw;
+  width: 17vw;
+
+
+}
+.player_head{
+
+  height: 3vw;
+  width: 3vw;
+  background-color: red;
+  border-radius: 50%;
+  left: 50%;
+  margin-left:-1.5vw; 
+  position: relative;
+
+}
+.player_body{
+  
+  background-color: red;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  left: 50%;
+  margin-left: -2.5vw;
+
+}
+
+.p_name{
+  height: 2vw;
+  width:10vw;
+   font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+   font-size: 2vw; 
+   position: relative;
+   margin-left: 5vw;
+
+}
+.speech_bubble{
+  width: 17vw;
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+#ph_1,#pb_1{
+  background-color: #003399;
+}
+.bubble_triangle {
+  width: 0;
+  height: 0;
+  border-right: 1vw solid transparent;
+  border-bottom: 0px ; /* change color as needed */
+  border-top:3vw solid fuchsia;
+  margin-left: 50%;
+}
+.bubble_rectangle {
+  height: 5vw;
+  width: 17vw;
+  background-color:fuchsia;
+  border-radius: 1vw 1vw 1vw 0vw;
+  margin-left: 50%;
+}
+.bubble_text {
+  color:white;
+  font-weight: 700;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  height: 5vw;
+  width: 17vw;
+  text-align: center;
+  padding-top: 1.5vw;
+}
+
+#player_1{
+  left: 50vw;
+  top: 26vw;
+  position: relative;
+  margin-left: -8.5vw;
+}
+#player_2{
+    left: 28vw;
+    top: 2vw;
+    position: relative;
+}
+#player_3{
+    left: 34vw;
+    top: -30vw;
+    position: relative;
+}
+#player_4{
+    left: 49vw;
+    top: -47vw;
+    position: relative;
+}
+#player_5{
+    left: 55vw;
+    top: -50vw;
+    position: relative;
+}
+#game_buttons{
+    position: relative;
+    top:-40vw;
+    left: 40vw;
+    width: 40vw;
+}
+}
+
+
+
+/*middle--------------------------------*/
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+
+  #acc_settings{
+    height: 6vw;
+    width: 6vw;
+    float: right;
+    cursor: pointer;
+    margin-right: 2vw;
+  }
+  .strip{
+    height: 10vw;
+    width:100vw;
+  }
+  #middle_strip{
+    background: white;
+
+  }
+  #top_strip{
+    background:white;
+  }
+  #bottom_strip{
+    background: linear-gradient(to right, green,chartreuse);
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    text-align: right;
+    font-size: 3.8vw;
+  }
+  #website-name{
+    margin-right: 2vw;
+    font-size: 8vw;
+  }
+  #balance_text{
+    
+    width: 
+  }
+  #balance{
+    float:right;
+  }
+  #balance_text{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    margin-left: 2vw;
+    width:27vw;
+    font-size: 4.5vw;
+  }
+  #rupee{
+    float: right;
+  }
+  #strip_1{
+    height: 20.5vw;
+    width:100vw;
+    background-color: white;
+    display: block;
+
+  }
+  #game_type_text{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 3vw;
+    float: left;
+    margin-left: 2vw;
+    margin-right: 4vw;
+    margin-top: 1.5vw;
+  }
+  .games {
+    --b: 0.5vw;
+    --s: 1vw;
+    --color: #373B44;
+    float: left;
+    padding: calc(0.3vw + var(--s)) calc(1.5vw + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: 0.9vw;
+    font-size: 3vw;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 3vw;
+    margin-top: 2vw;
+  }
+
+  .games:hover,
+  .games:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05vw;
+  }
+
+  .games:active {
+    background: var(--color);
+    color: #fff;
+  }
+  #error-msg-form{
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30vw;
+    height:20vw;
+    margin-left: -15vw;
+    margin-top: -10vw;
+    border: 0.2vw solid black;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    z-index: 3;
+    background: linear-gradient(to right, lightblue, white);
+
+  }
+    .header-form{
+        height: 3.4vw;
+        background: linear-gradient(to left,lightblue, lightgrey,white);
+    }
+    .close {
+        position: absolute; 
+        top: 0vw; 
+        right: 0vw; 
+        width: 5vw;
+        font-size: 2.8vw; 
+        text-align: center;
+        color: red;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        text-decoration: none; 
+        background:linear-gradient(to right,white,lightblue);
+
+    }
+    #gamearea{
+        height: 85vw;
+        background-color: green;
+        width:100vw;
+
+    }
+    .quit_game{
+        float: right;
+        background:linear-gradient(to right,#CC0000,#FF0800);
+        color:white;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        font-weight: 600;
+        border:none;
+        height: 7vw;
+        width:17vw;
+        margin-right: 2vw;
+        cursor: pointer;
+        font-size: 2.7vw;
+        
+    }
+    #binary_box{
+        display: none;
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        width:40vw;
+        height:30vw;
+        margin-left: -20vw;
+        margin-top: -15vw;
+        font-size: 2vw;
+        border: .15vw solid black;
+        font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+        z-index: 3;
+        background: linear-gradient(to right, lightblue, white);
+
+    }
+    .header-form_1{
+        height: 3.4vw;
+        background: linear-gradient(to left,#CC0000,#FF0800);
+    }
+    #bb_msg{
+        margin-top: 4vw;
+        margin-left: 2vw;
+    }
+    #yes_button{
+      border: 0.2vw solid #FF0800;
+      color: white;
+      font-weight: 750;
+      border-radius: 2vw;
+      margin-left: 12vw;
+      height: 3.5vw;
+      width: 10vw;
+      margin-left: 7vw;
+      margin-top: 2vw; 
+      font-size: 1.2vw;
+      font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+      cursor: pointer;
+      float: left;
+      background:linear-gradient(to left,#CC0000,#FF0800);
+    }
+    #no_button{
+      border: 0.2vw solid blue;
+      color: blue;
+      font-weight: 750;
+      border-radius: 2vw;
+      margin-left: 4vw;
+      height: 3.5vw;
+      float: left;
+      width: 10vw;
+      margin-top: 2vw; 
+      font-size: 1.2vw;
+      font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+      cursor: pointer;
+      background:white;
+    }
+
+
+
+
+.player_icon{
+  height: 17vw;
+  width: 17vw;
+
+
+}
+.player_head{
+
+  height: 3vw;
+  width: 3vw;
+  background-color: red;
+  border-radius: 50%;
+  left: 50%;
+  margin-left:-1.5vw; 
+  position: relative;
+
+}
+.player_body{
+  
+  background-color: red;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  left: 50%;
+  margin-left: -2.5vw;
+
+}
+
+.p_name{
+    height: 2vw;
+    width: 16vw;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 4vw;
+    position: relative;
+    margin-left: 5vw;
+}
+.speech_bubble{
+  width: 17vw;
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+#ph_1,#pb_1{
+  background-color: #003399;
+}
+.bubble_triangle {
+  width: 0;
+  height: 0;
+  border-right: 1vw solid transparent;
+  border-bottom: 0px ; /* change color as needed */
+  border-top:3vw solid fuchsia;
+  margin-left: 50%;
+}
+.bubble_rectangle {
+  height: 8vw;
+  width: 22vw;
+  background-color:fuchsia;
+  border-radius: 1vw 1vw 1vw 0vw;
+  margin-left: 50%;
+}
+.bubble_text {
+  color:white;
+  font-weight: 700;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  height: 5vw;
+  width: 17vw;
+  text-align: center;
+  padding-top: 1.5vw;
+  font-size: 4vw;
+}
+
+#player_1{
+  left: 50vw;
+  top: 40vw;
+  position: relative;
+  margin-left: -8.5vw;
+}
+#player_2{
+    left: 20vw;
+    top: 13vw;
+    position: relative;
+}
+#player_3{
+    left: 26vw;
+    top: -30vw;
+    position: relative;
+}
+#player_4{
+    left: 49vw;
+    top: -47vw;
+    position: relative;
+}
+#player_5{
+    left: 60vw;
+    top: -40vw;
+    position: relative;
+}
+#game_buttons{
+    position: relative;
+    top:-15vw;
+    left: 40vw;
+    width: 40vw;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

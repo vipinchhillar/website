@@ -1,0 +1,70 @@
+.player_icon{
+  height: 170px;
+  width: 170px;
+  border:1px solid black;
+  margin-left: 100px;
+
+
+}
+.player_head{
+
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 50%;
+  left: 50%;
+  margin-left:-15px; 
+  position: relative;
+
+}
+.player_body{
+  
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  left: 50%;
+  margin-left: -25px;
+
+}
+
+#p1_name{
+	height: 20px;
+	width:100px;
+   font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+   font-size: 20px; 
+   position: relative;
+   margin-left: 50px;
+
+}
+.speech_bubble{
+  width: 17vw;
+  border: none;
+}
+.bubble_triangle {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 0px ; /* change color as needed */
+  border-top:30px solid fuchsia;
+  margin-left: 50%;
+}
+.bubble_rectangle {
+  height: 50px;
+  width: 170px;
+  background-color:fuchsia;
+  border-radius: 10px 10px 10px 0px;
+  margin-left: 50%;
+}
+.bubble_text {
+  color:white;
+  font-weight: 700;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  height: 50px;
+  width: 170px;
+  text-align: center;
+  padding-top: 15px;
+}
